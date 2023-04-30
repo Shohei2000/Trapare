@@ -1,0 +1,80 @@
+/*============
+nav
+=============*/
+nav {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: -300px;
+	bottom: 0;
+	width: 300px;
+	background: #ffffff;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	transition: all .5s;
+	z-index: 3;
+	opacity: 0;
+}
+
+.open nav {
+	left: 0;
+	opacity: 1;
+}
+
+nav .inner {
+	padding: 25px;
+}
+
+nav .inner ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav .inner ul li {
+	position: relative;
+	margin: 0;
+	border-bottom: 1px solid #333;
+    float: none;
+}
+
+nav .inner ul li a {
+	display: block;
+	color: #333;
+	font-size: 14px;
+	padding: 1em;
+	text-decoration: none;
+	transition-duration: 0.2s;
+}
+
+nav .inner ul li a:hover {
+	background: #e4e4e4;
+}
+
+@media screen and (max-width: 767px) {
+	nav {
+		left: -220px;
+		width: 220px;
+	}
+}
+/*============
+#mask
+=============*/
+#mask {
+	display: none;
+	transition: all .5s;
+}
+
+.open #mask {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: .8;
+	z-index: 2;
+	cursor: pointer;
+}
